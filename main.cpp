@@ -66,6 +66,14 @@ int main()
 	/****************************
 	** Delete Board when finished
 	****************************/
+	for (int row = 0;row < numberOfRows + 2; row++)		// Delete all Critter Type Objects
+	{
+		for (int col = 0; col < numberOfColumns + 2; col++)
+		{
+			delete gameBoardPtr[row][col];
+		}
+	}
+	
 	for (int row = 0; row < numberOfRows + 2; row++)
 	{
 		delete[] gameBoardPtr[row]; // Free each array of Critter pointers
